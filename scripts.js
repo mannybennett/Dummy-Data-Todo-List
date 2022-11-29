@@ -25,9 +25,13 @@ const logTodos = () => {
 }
     
 const populateTodos = () => {
-    const list = document.getElementById('todo-list')
-    const element = document.createElement('li')
-    const text = document.createTextNode(arrayOfTodos[0].title)
-    list.appendChild(element)
-    element.append(text)
+    for (let i=0; i < arrayOfTodos.length; i++) {
+
+        const list = document.getElementById('todo-list')
+        const element = document.createElement('li')
+        const text = document.createTextNode(arrayOfTodos[i].title)
+        list.appendChild(element)
+        element.append(text)
+        
+    }
 }
