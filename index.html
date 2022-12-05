@@ -15,12 +15,13 @@
         <form method="post">
             <label for="userId">User ID</label>
             <input type="number" id="userId" name="userId" min="1" max="10">
-            <input type="submit" value="Submit" onclick="userInput">
+            <input type="submit" value="Submit" onclick="filteredTodos()">
         </form>
         <br>
         <button onclick="fetchTodos()">Fetch Todos</button>
         <button onclick="logTodos()">Log Todos</button>
         <button onclick="populateTodos()">Populate Todos</button>
+        <button onclick="completedTodos()">Completed</button>
         <ol id="todo-list"></ol>
 
     </main>
