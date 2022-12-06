@@ -23,7 +23,7 @@ const reset = () => {
     list.innerHTML = ""
 }
 
-const complete = []
+let complete = []
 
 const filteredTodos = () => {
     
@@ -40,7 +40,7 @@ const filteredTodos = () => {
         const text = document.createTextNode(filterArray[i].title)
         list.appendChild(element)
         element.append(text)
-        complete.push(filterArray)
+        complete = filterArray
 
         console.log(complete)
     }
@@ -49,9 +49,27 @@ const filteredTodos = () => {
 const completedTodos = () => {
     
     reset()
-    
+    console.log(complete)
     for (let i=0; i < complete.length; i++) {
         if (complete[i].completed === true) {
+            
+            console.log(complete)
+
+            const element = document.createElement('li')
+            const text = document.createTextNode(complete[i].title)
+            list.appendChild(element)
+            element.append(text)
+            
+        }
+    }
+}
+
+const incompleteTodos = () => {
+    
+    reset()
+    console.log(complete)
+    for (let i=0; i < complete.length; i++) {
+        if (complete[i].completed === false) {
             
             console.log(complete)
 
